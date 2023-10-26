@@ -8,14 +8,20 @@ let result;
 
 choiceBtn.forEach(button => button.addEventListener("click", () => {
   player = button.textContent;
+  // const element = document.getElementById("myElement");
+  // const text = element.textContent; // Retrieves the text content of the element
+  
   computerTurn();
   playerText.textContent = `Player: ${player}`;
   computerText.textContent =`Computer: ${computer}`;
+  // const element = document.getElementById("myElement");
+  // element.textContent = "New content"; // Sets the text content of the element to "New content"
+
   resultText.textContent = checkWinner(); 
 }));
 
 function computerTurn(){
-  const randNum = Math.floor(Math.random() * 3 ) + 1;
+  const randNum = Math.floor(Math.random() * 3 ) + 1; //const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
   switch(randNum){
     case 1:
